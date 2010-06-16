@@ -84,11 +84,12 @@ public :
 };
 
 /// \class AbstractMesh "include/AbstractMesh.h"
-///  \author Jonathan Macey
-///    \version 1.0
-///    \date 24/09/09 Last Revision 24/09/09
-///  \brief an abstract base mesh used to build specific meshes such
-/// as Obj
+/// \author Jonathan Macey
+/// \version 1.0
+/// \date 24/09/09
+/// Last Revision 16/06/10 added accessors for the mesh elements
+/// \brief an abstract base mesh used to build specific meshes such as Obj
+///
 
 class AbstractMesh
 {
@@ -175,6 +176,28 @@ public :
                         {
                           return m_ext;
                         }
+
+
+  /// @brief accessor for the vertex data
+  /// @returns a std::vector containing the vert data
+  std::vector <ngl::Vector> GetVertexList(){return m_verts;}
+
+
+  /// @brief accessor for the normals data
+  /// @returns a std::vector containing the normal data
+  std::vector <ngl::Vector> GetNormalList(){return m_norm;}
+
+
+  /// @brief accessor for the texture co-ordinates data
+  /// @returns a std::vector containing the texture cord data
+  std::vector <ngl::Vector> GetTextureCordList(){return m_tex;}
+
+
+
+  /// @brief accessor for the Face data
+  /// @returns a std::vector containing the face data
+  std::vector <Face> GetFaceList(){return m_face;}
+
 
 protected :
 
