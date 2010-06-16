@@ -192,12 +192,18 @@ public :
   /// @returns a std::vector containing the texture cord data
   std::vector <ngl::Vector> GetTextureCordList(){return m_tex;}
 
-
-
   /// @brief accessor for the Face data
   /// @returns a std::vector containing the face data
   std::vector <Face> GetFaceList(){return m_face;}
 
+  /// @brief accessor to get the number of vertices in the object
+  inline unsigned long int GetNumVerts() const {return m_nVerts;}
+  /// @brief accessor to get the number of normals in the object
+  inline unsigned long int GetNumNormals()const {return m_nNorm;}
+  /// @brief accessor to get the number of texture co-ordinates in the object
+  inline unsigned long int GetNumTexCords()const {return m_nTex;}
+  /// @brief accessor to get the number of faces in the object
+  inline unsigned long int GetNumFaces()const {return m_nFaces;}
 
 protected :
 
