@@ -19,6 +19,7 @@
 #include "NCCABinMesh.h"
 #include "Util.h"
 #include "Texture.h"
+#include <cstring> // for strcmp
 
 
 namespace ngl
